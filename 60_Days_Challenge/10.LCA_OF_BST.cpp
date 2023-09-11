@@ -19,12 +19,12 @@ using namespace std;
 // ! SOLUTION
 
 
-reeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        TreeNode* cur = root;
+Node* lowestCommonAncestor(Node* root, Node* p, Node* q) {
+        Node* cur = root;
         while (true) {
-            if (p -> val < cur -> val && q -> val < cur -> val) {
+            if (p -> data < cur -> data && q -> data < cur -> data) {
                 cur = cur -> left;
-            } else if (p -> val > cur -> val && q -> val > cur -> val) {
+            } else if (p -> data > cur -> data && q -> data > cur -> data) {
                 cur = cur -> right;
             } else {
                 break;
